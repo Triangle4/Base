@@ -1,0 +1,16 @@
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.csproj.AssemblyReference.cache
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.AssemblyInfoInputs.cache
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.AssemblyInfo.cs
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.csproj.CoreCompileInputs.cache
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\Base.exe
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\Base.deps.json
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\Base.runtimeconfig.json
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\Base.runtimeconfig.dev.json
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\Base.dll
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\ref\Base.dll
+D:\Dropbox\Project\Git\Projects\Base\bin\Debug\net5.0\Base.pdb
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.dll
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\ref\Base.dll
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.pdb
+D:\Dropbox\Project\Git\Projects\Base\obj\Debug\net5.0\Base.genruntimeconfig.cache
