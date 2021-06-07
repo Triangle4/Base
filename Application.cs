@@ -8,7 +8,7 @@ public class Application
     private static bool showCursor = false;
 
     private static Input input = new Input();
-    private static Game game = new Game();
+    private static ScriptManager scriptManager = new ScriptManager();
 
     static void Main (string [] args)
     {
@@ -17,7 +17,7 @@ public class Application
         Debug.Initialize();
         
         Time.Init();
-        game.Start();
+        scriptManager.Start();
         Cursor(showCursor);
         Loop();
         Termination();
@@ -27,7 +27,7 @@ public class Application
         while (running)
         {
             Time.ProcessTime();
-            game.Loop();
+            scriptManager.Loop();
         }
     }
     public static void Quit()

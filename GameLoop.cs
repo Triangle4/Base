@@ -1,11 +1,5 @@
 public class GameLoop
 {
-    public void Loop()
-    {
-        OnEarlyUpdate();
-        OnUpdate();
-        OnLateUpdate();
-    }
     public void Start()
     {
         Singleton();
@@ -13,6 +7,13 @@ public class GameLoop
         OnEnable();
         OnStart();
     }
+    public void Loop()
+    {
+        OnEarlyUpdate();
+        OnUpdate();
+        OnLateUpdate();
+    }
+    
     public virtual void Singleton(){}
     public virtual void OnAwake(){}
     public virtual void OnEnable(){}
