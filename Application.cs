@@ -4,7 +4,7 @@ using System;
 public class Application
 {
     private static bool running = true;
-    private static bool debugMode = false;
+    private static bool debugMode = true;
     private static bool showCursor = false;
 
     private static Input input = new Input();
@@ -18,7 +18,6 @@ public class Application
     {
         Cursor(showCursor);
         Debug.Initialize();
-        Time.Init();
         scriptManager.Start();
     }
     static void Main (string [] args)
@@ -27,7 +26,6 @@ public class Application
         Initialize();
         while (running)
         {
-            Time.ProcessTime();
             scriptManager.Loop();
         }
         Termination();

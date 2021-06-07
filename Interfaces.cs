@@ -8,3 +8,8 @@ public interface iBehaviour
     void EarlyUpdate();
     void LateUpdate();
 }
+public interface iProcess
+{
+    void Initialize();
+    void Refresh();
+}
