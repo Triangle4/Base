@@ -1,5 +1,5 @@
 public class GameObject
 {
     public string name;
-    public Transform transform = new Transform();
+    public Transform transform;
 }
