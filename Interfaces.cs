@@ -1,16 +1,10 @@
-public interface IUpdate
+public interface iBehaviour
 {
-    void iUpdate();
-}
-public interface IFixedUpdate
-{
-    void iFixedUpdate();
-}
-public interface IEarlyUpdate
-{
-    void iEarlyUpdate();
-}
-public interface ILateUpdate
-{
-    void iLateUpdate();
+    void Awake();
+    void Enable();
+    void Start();
+    void Update();
+    void FixedUpdate();
+    void EarlyUpdate();
+    void LateUpdate();
 }

@@ -1,12 +1,12 @@
 using System;
-public class Player : GameObject
+public class Player : UnoBehaviour
 {
     private Vector2Int position;
-    public void Start()
+    public override void Start()
     {
         position = new Vector2Int(System.Console.CursorLeft, System.Console.CursorTop);
     }
-    public void Update()
+    public override void Update()
     {
         if(Input.GetKey(ConsoleKey.Escape))
             Application.Quit();

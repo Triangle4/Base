@@ -2,38 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class ScriptManager: GameLoop
+public class ScriptManager
 {
-    private Player player = new Player();
-    public static ScriptManager manager;
+    List<iBehaviour> behaviorMap = new List<iBehaviour>();
     
-    public override void Singleton()
+    void GetTypes()
     {
-        manager = this;
+        var behaviour = typeof(iBehaviour);
+        var behaviorTypes = AppDomain.CurrentDomain.GetAssemblies().SelectMany(assembly => assembly.GetTypes()).Where(type => behaviour.IsAssignableFrom(type) && type.IsClass);
+        foreach (var i in behaviorTypes)
+        {
+            behaviorMap.Add(Activator.CreateInstance(i) as iBehaviour);
+        }
+           
     }
-    public override void OnStart()
+    public void Start()
     {
-        player.Start();
+        GetTypes();
+        behaviorMap.ForEach(b => b.Start());  
     }
-
-
-
-    // ============================================================================== Update ======================================================================
-    private List<IUpdate> updates = new List<IUpdate>();
-    public override void OnUpdate()
+    public void Loop()
     {
-        player.Update();
-    }
-    public void Add(IUpdate update)
-    {
-        updates.Add(update);
-    }
-    public bool HasUpdate(IUpdate update)
-    {
-        return updates.Contains(update);
-    }
-    public void Remove(IUpdate update)
-    {
-        updates.Remove(update);
+        behaviorMap.ForEach(b => b.Update());  
     }
 }

@@ -9,26 +9,28 @@ public class Application
 
     private static Input input = new Input();
     private static ScriptManager scriptManager = new ScriptManager();
-
-    static void Main (string [] args)
+    static void SetConsole()
     {
         Console.Clear();
         Console.OutputEncoding = System.Text.Encoding.UTF8;
+    }
+    static void Initialize()
+    {
+        Cursor(showCursor);
         Debug.Initialize();
-        
         Time.Init();
         scriptManager.Start();
-        Cursor(showCursor);
-        Loop();
-        Termination();
     }
-    static void Loop()
+    static void Main (string [] args)
     {
+        SetConsole();
+        Initialize();
         while (running)
         {
             Time.ProcessTime();
             scriptManager.Loop();
         }
+        Termination();
     }
     public static void Quit()
     {
@@ -47,5 +49,4 @@ public class Application
     {
         System.Console.CursorVisible = visible;
     }
-    
 }
